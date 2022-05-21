@@ -1,0 +1,66 @@
+<!--SIDEBAR-->
+<div id="sidebar" class="leaflet-sidebar collapsed">
+    <!-- nav tabs -->
+    <div class="leaflet-sidebar-tabs">
+        <!-- top aligned tabs -->
+        <ul role="tablist">
+            <li><a href="#home" role="tab"><i class="fa fa-bars active"></i></a></li>
+            <li><a href="#autopan" role="tab"><i class="fa fa-sort-down"></i></a></li>
+        </ul>
+        <!-- bottom aligned tabs -->
+        <ul role="tablist">
+            <li><a href="https://github.com/nickpeihl/leaflet-sidebar-v2"><i class="fa fa-github"></i></a></li>
+        </ul>
+    </div>
+
+    <!-- panel content -->
+    <div class="leaflet-sidebar-content">
+        <div class="leaflet-sidebar-pane" id="home">
+            <h1 class="leaflet-sidebar-header">
+                Locust Habitat Suitability
+                <span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
+            </h1>
+        </div>
+
+        <div class="leaflet-sidebar-pane" id="autopan">
+            <h1 class="leaflet-sidebar-header">Select Lyr<span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
+            </h1>
+            <form action="" method="post" id="update-form"> 
+                <div class="mb-3">
+                    <label for="model">Model</label>
+                    <select class="form-select form-select-sm" id="model" name="model" aria-label="Select Model">
+                        <option value="1" selected>Maxent</option>
+                        <option value="2">Analytical Hierarchial Process</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="model">Year</label>
+                    <select class="form-select form-select-sm" id="year" name="year" aria-label="Select Year">
+                        <option value="2020" selected>2020</option>
+                        <option value="2021">2021</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="model">Month</label>
+                    <select class="form-select form-select-sm" id="month" name="month" aria-label="Select Month">
+                        <option value="01" selected>January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    
+                </div>
+                <button type="submit" class="btn btn-secondary">View</button>
+
+            </form>
+        </div>
+    </div>
+</div>
