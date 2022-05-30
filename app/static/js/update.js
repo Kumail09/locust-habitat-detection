@@ -1,10 +1,12 @@
 /**Add layers (Maxent/Ahp) from Geoserver */
 var maxent_pk = null;
 var maxent_sa = null;
+var MONTH = null; 
+var YEAR = null;
 
-
-function addModelLyrs(month, year, type){
-    
+function addModelLyrs(month, year, type){    
+    MONTH = month;
+    YEAR = year; 
     var base_url = `http://localhost:8585/geoserver/fyp/wms?&time=${year}-${month}-01`
     // var base_url = `http://localhost:8585/geoserver/fyp/wms?`
     
@@ -12,10 +14,11 @@ function addModelLyrs(month, year, type){
         map.removeLayer(maxent_pk);
         console.log('Removed');
     }
-        maxent_pk = L.tileLayer.wms(base_url, {
+        maxent_pk = L.tileLayer.betterWms(base_url, {
             layers: 'fyp:Maxent-Pakistan',
             format: 'image/png',
             transparent: true,
+            styles: 'style_maxent',
             attribution: "Maxent model @ Pakistan"
             }).addTo(map);            
 
@@ -23,10 +26,11 @@ function addModelLyrs(month, year, type){
         map.removeLayer(maxent_sa)
         console.log('Removed');
     }
-        maxent_sa = L.tileLayer.wms(base_url, {
+        maxent_sa = L.tileLayer.betterWms(base_url, {
             layers: 'fyp:Maxent-StudyArea',
             format: 'image/png',
             transparent: true,
+            styles: 'style_maxent',
             attribution: "Maxent model @ Study Region"
             }).addTo(map);
 

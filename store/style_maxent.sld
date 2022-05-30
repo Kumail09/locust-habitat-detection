@@ -15,7 +15,8 @@
               </sld:GrayChannel>
             </sld:ChannelSelection>
             <sld:ColorMap type="ramp">
-              <sld:ColorMapEntry label="0.0800" quantity="0.080000000000000002" color="#30123b"/>
+              <sld:ColorMapEntry label="0.0000" quantity="0" opacity="0" color="#ff00ff"/>
+              <sld:ColorMapEntry label="0.0800" quantity="0.080000000000000002" opacity="0" color="#30123b"/>
               <sld:ColorMapEntry label="0.1500" quantity="0.14999999999999999" color="#424ab3"/>
               <sld:ColorMapEntry label="0.2300" quantity="0.23000000000000001" color="#4684f9"/>
               <sld:ColorMapEntry label="0.3100" quantity="0.31" color="#28bceb"/>

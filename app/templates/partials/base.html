@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Leaflet TimeDimension Demo</title>
+    <title>Locust Habitat Detection</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.min.css" />
     <!-- CSS Bootstrap -->
@@ -11,6 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
+    <link href={% static 'css/main.css'%} rel="stylesheet">
     <!-- JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
@@ -24,7 +25,11 @@
     <link href={% static 'plugins/sidebar-v2/leaflet-sidebar.css'%} rel="stylesheet">
     <!-- JS Side-bar-->
     <script src={% static 'plugins/sidebar-v2/leaflet-sidebar.js'%}></script>
-    {% include 'map/sidebar.html' %} 
+    <!-- Better WMS-->
+    <script src={% static 'plugins/betterwms/BetterWMS.js'%}></script>
+    
+
+    {% include 'map/sidebar.html' %}
     {% block sidebar %} {%endblock %}
     {% block basemap %} {%endblock %}
   </body>

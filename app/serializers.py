@@ -1,6 +1,7 @@
+from pyexpat import model
 from rest_framework_gis.serializers import GeoFeatureModelSerializer
 from rest_framework.serializers import ModelSerializer
-from . models import Hoppers, SuitablityRaster, GraphImg, ParamRaster
+from . models import Hoppers, SuitablityRaster, GraphImg, ParamRaster, Region
 from django.contrib.gis.gdal import GDALRaster
 
 
@@ -36,3 +37,10 @@ class ParamRasterSerializer(ModelSerializer):
     class Meta:
         model = ParamRaster
         fields = '__all__'
+
+
+class RegionSerializer(GeoFeatureModelSerializer):
+    class Meta:
+        model = Region
+        fields = "__all__"
+        geo_field = "geom"

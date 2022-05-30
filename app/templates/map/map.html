@@ -1,8 +1,14 @@
 {% extends 'partials/base.html' %} {% load static %} 
 {% block basemap %}
+
     <div id="map" style="height: 100vh; width: 100%"></div>
+    <!-- Search Control -->
+    <link href={% static 'plugins/Leaflet.Sidebar.v2/css/leaflet-sidebar.css' %} rel="stylesheet">
+    <script type="text/javascript" src={% static 'plugins/Leaflet.Sidebar.v2/js/leaflet-sidebar.js' %}></script>
+    
     <script type="text/javascript" src={% static 'js/basemap.js'%}></script>
     <script type="text/javascript" src={% static 'js/sidebar.js'%}></script>
     <script type="text/javascript" src={% static 'js/update.js'%}></script>
+    <script type="text/javascript" src={% static 'js/buttons.js'%}></script>
     <pre id="result"></pre>
 {% endblock %}

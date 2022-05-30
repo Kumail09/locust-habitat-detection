@@ -25,3 +25,9 @@ class ParamRaster(models.Model):
     type = models.CharField(max_length=255)
     id = models.BigAutoField(primary_key=True)    
     raster = models.RasterField(srid=4326)
+
+
+class Region(models.Model):
+    id = models.BigAutoField(primary_key=True)    
+    name = models.CharField(max_length=254)
+    geom = models.MultiPolygonField(srid=4326)

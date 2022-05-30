@@ -5,11 +5,11 @@
         <!-- top aligned tabs -->
         <ul role="tablist">
             <li><a href="#home" role="tab"><i class="fa fa-bars active"></i></a></li>
-            <li><a href="#autopan" role="tab"><i class="fa fa-sort-down"></i></a></li>
+            <li><a href="#autopan" role="tab" tooltip="Select Model"><i class="fa fa-sort-down"></i></a></li>
         </ul>
         <!-- bottom aligned tabs -->
         <ul role="tablist">
-            <li><a href="https://github.com/nickpeihl/leaflet-sidebar-v2"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://github.com/Kumail09/locust-habitat-detection"><i class="fa fa-github"></i></a></li>
         </ul>
     </div>
 
@@ -20,6 +20,11 @@
                 Locust Habitat Suitability
                 <span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
             </h1>
+            <br>
+            <p>Navigate using Sidebar and View Different Models along with Overlay Data</p>
+            <hr>
+            <p>Locust outbreaks have recently devastated agricultural and natural vegetation around the world, causing massive damage and compromising food security. Massive desert locust outbreaks and swarms migrate across the Arabian Peninsula, East Africa, India, and Pakistan due to unusually heavy rainfall in desert locust habitats and a lack of monitoring due to political conflicts or inaccessibility of those habitats. The distribution of locust habitat in Pakistan is constantly changing due to the impact of climate change and human activities. For large-scale agricultural production, monitoring and extracting locust habitat is critical. The locust's occurrence is closely linked to their habitat. To track locust habitat distribution, a comprehensive analysis of habitat factors that affect locust survival is conducted. Despite technological advancements in locust monitoring, prediction, and control approaches, the risk and damage caused by locust pests is as present as ever, affecting 100 million human lives. In locust management, remote sensing has become one of the most important data sources. This paper delves into a model for analyzing multitemporal MODIS images that combined multiple habitat factors to investigate locust habitat. The habitat factors that affect locust oviposition and growth were studied, and four habitat factors were chosen: vegetation coverage, soil moisture, soil salinity, and land surface temperature. The Analytic Hierarchy Process (AHP) model was used to evaluate the weights of four habitat factors. Despite great advance and usage of available remote sensing resources, we identify several gaps and potential for future research to further improve the understanding and capacities of the use of remote sensing in supporting locust outbreak- research and management.
+            </p>
         </div>
 
         <div class="leaflet-sidebar-pane" id="autopan">
@@ -30,7 +35,7 @@
                     <label for="model">Model</label>
                     <select class="form-select form-select-sm" id="model" name="model" aria-label="Select Model">
                         <option value="1" selected>Maxent</option>
-                        <option value="2">Analytical Hierarchial Process</option>
+                        <option value="2" disabled>Analytical Hierarchial Process</option>
                     </select>
                 </div>
                 <div class="mb-3">
@@ -56,7 +61,7 @@
                         <option value="11">November</option>
                         <option value="12">December</option>
                     </select>
-                    
+
                 </div>
                 <button type="submit" class="btn btn-secondary">View</button>
 
